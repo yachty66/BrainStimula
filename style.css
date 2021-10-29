@@ -11,7 +11,7 @@ body {
 }
 
 .header{
-
+    
     justify-content: center;
     display: flex;
     height: 13%;
@@ -63,3 +63,73 @@ body {
 .img{
     margin-left: 30%;
 }
+
+.main-body{
+    height: 87%;
+    width: 100%;
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+}
+
+.deep-container{
+    margin-top: 7%;
+    background-color: #4AC040;
+    display: flex;
+    width: 40%;
+    height: 15%;
+}
+
+.text-in-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color:#4AC040;
+}
+
+.buttons-in-container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.play-container{
+    display: flex;
+    width: 20%;
+
+}
+
+.step-backward-container{
+    display: flex;
+    flex: 1
+}
+
+.step-forward-container{
+    display: flex;
+    flex: 1
+}
+
+.step-backward{
+    justify-content: flex-end;
+    display: flex;
+    flex: 1;
+}
+
+.step-forward{
+    display: flex;
+    flex: 1;
+}
+
+.play{
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}
+
+.text{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
