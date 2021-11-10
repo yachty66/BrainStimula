@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/018026acd1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="inner-header">
+                <div class="logo-text-container">
+                    <div class="heading">
+                        brainStimula
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-heading">
+                        <a href="mailto:maxhager28@gmail.com" target="_blank">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-body">
+            <div class="music-container">
+                <div class="text-in-container">
+                    <div class="text">DEEP WORK</div>
+                </div>
+                <div class="buttons-in-container">
+                    <!--<div class="step-backward-container">
+                        <div class="step-backward"><i class="fas fa-step-backward fa-3x"></i></div>
+                    </div>-->
+                    <div class="play-container">
+                        <div class="play" id="play-button"><i class="fas fa-play fa-3x" onclick="onclickPlayButtonDeep()"></i></div>
+                        <div class="play" id="stop-button"><i class="fas fa-stop fa-3x" onclick="onclickStopButtonDeep()"></i></div>
+                    </div>
+                    <!--<div class="step-forward-container">
+                        <div class="step-forward"><i class="fas fa-step-forward fa-3x" onclick="onclickStepForwardButtonDeep()"></i></div>
+                    </div>-->                 
+                </div>
+            </div>
+
+            <div class="music-container">
+                <div class="text-in-container">
+                    <div class="text">LIGHT WORK</div>
+                </div>
+                <div class="buttons-in-container">
+                    <div class="play-container">
+                        <div class="play" id="play-button-light"><i class="fas fa-play fa-3x" onclick="onclickPlayButtonLight()"></i></div>
+                        <div class="play" id="stop-button-light"><i class="fas fa-stop fa-3x" onclick="onclickStopButtonLight()"></i></div>
+                    </div>               
+                </div>
+            </div>
+            
+            <div class="music-container">
+                <div class="text-in-container">
+                    <div class="text">CREATIVE WORK</div>
+                </div>
+                <div class="buttons-in-container">
+                    <div class="play-container">
+                        <div class="play" id="play-button-creative"><i class="fas fa-play fa-3x" onclick="onclickPlayButtonCreative()"></i></div>
+                        <div class="play" id="stop-button-creative"><i class="fas fa-stop fa-3x" onclick="onclickStopButtonCreative()"></i></div>
+                    </div>               
+                </div>
+            </div>
+
+            <div class="music-container">
+                <div class="text-in-container">
+                    <div class="text">STUDY</div>
+                </div>
+                <div class="buttons-in-container">
+                    <div class="play-container">
+                        <div class="play" id="play-button-study"><i class="fas fa-play fa-3x" onclick="onclickPlayButtonStudy()"></i></div>
+                        <div class="play" id="stop-button-study"><i class="fas fa-stop fa-3x" onclick="onclickStopButtonStudy()"></i></div>
+                    </div>               
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="code_deep/deep.js"></script>
+    <script src="code_light/light.js"></script>
+    <script src="code_creative/creative.js"></script>
+    <script src="code_study/study.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
