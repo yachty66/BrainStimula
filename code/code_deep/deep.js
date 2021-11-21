@@ -1,25 +1,25 @@
 //list with music
-var sounds = [
-    "music/deep/1.mp4",
-    "/music/deep/2.mp4",
-    "/music/deep/3.mp4",
-    "/music/deep/4.mp4",
-    "/music/deep/5.mp4",
-    "/music/deep/6.mp4",
-    "/music/deep/7.mp4",
+var soundsDeep = [
+    "code/code_deep/1.mp4",
+    "code/code_deep/2.mp4",
+    "code/code_deep/3.mp4",
+    "code/code_deep/4.mp4",
+    "code/code_deep/5.mp4",
+    "code/code_deep/6.mp4",
+    "code/code_deep/7.mp4",
 ];
 
 //played music gets transferred here
-var soundsTwo=[];
+var soundsTwoDeep=[];
 
 //creates new audio object which is retrieveable from every function
-var sound = new Audio();
+var soundDeep = new Audio();
 
 //counter for knowing if music was already played
-var value = 0;
+var valueDeep = 0;
 
 //setter var for stop button
-var stop = false;
+var stopDeep = false;
 
 //create a random number
 function generateRandomNumber(max) {
@@ -30,48 +30,48 @@ function generateRandomNumber(max) {
 function onclickStopButtonDeep(){
   document.getElementById("play-button").style.display="flex";
   document.getElementById("stop-button").style.display="none";
-  stop = true;
-  soundRegulation();
-  stop = false;
+  stopDeep = true;
+  soundRegulationDeep();
+  stopDeep = false;
 }
 
 //starts playing music with click on play button
 function onclickPlayButtonDeep(){
   document.getElementById("play-button").style.display="none";
   document.getElementById("stop-button").style.display="flex";
-  value += 1;
-  soundRegulation();
+  valueDeep += 1;
+  soundRegulationDeep();
 }
 
 //creates audio object depending on which state
-function createAudioObject(){
-  if(sounds.length != 0){
-    sounds.push(soundsTwo[0]);
-    soundsTwo.shift();
+function createAudioObjectDeep(){
+  if(soundsDeep.length != 0){
+    soundsDeep.push(soundsTwoDeep[0]);
+    soundsTwoDeep.shift();
   }
-  var x = generateRandomNumber(sounds.length - 1);
-  var soundSrc = sounds[x];
-  soundsTwo.push(soundSrc);
-  sound.src = soundSrc;
-  value += 1;
+  var x = generateRandomNumber(soundsDeep.length - 1);
+  var soundSrcDeep = soundsDeep[x];
+  soundsTwoDeep.push(soundSrcDeep);
+  soundDeep.src = soundSrcDeep;
+  valueDeep += 1;
 }
  
 //regulates sound 
-function soundRegulation(){
+function soundRegulationDeep(){
   //if no music was played start new music
-  if (value == 1 && stop == false){
-    createAudioObject();
-    sound.play();
+  if (valueDeep == 1 && stopDeep == false){
+    createAudioObjectDeep();
+    soundDeep.play();
   //else play the music which was already played  
-  }else if(value > 1 && stop == false){
-    sound.play();
-  }else if(stop == true){
-    sound.pause();
+  }else if(valueDeep > 1 && stopDeep == false){
+    soundDeep.play();
+  }else if(stopDeep == true){
+    soundDeep.pause();
   }
 }
 
 //starts new music if current music is finished
 sound.addEventListener('ended',function(){
-  createAudioObject();
-  soundRegulation();
+  createAudioObjectDeep();
+  soundRegulationDeep();
 });

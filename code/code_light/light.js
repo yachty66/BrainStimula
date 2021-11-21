@@ -1,25 +1,26 @@
 //list with music
-var sounds = [
-    "/music/light/1.mp4",
-    "/music/light/2.mp4",
-    "/music/light/3.mp4",
-    "/music/light/4.mp4",
-    "/music/light/5.mp4",
-    "/music/light/6.mp4",
-    "/music/light/7.mp4",
+var soundsLight = [
+    "code/code_light/1.mp4",
+    "code/code_light/2.mp4",
+    "code/code_light/3.mp4",
+    "code/code_light/4.mp4",
+    "code/code_light/5.mp4",
+    "code/code_light/6.mp4",
+    "code/code_light/7.mp4",
 ];
 
+
 //played music gets transferred here
-var soundsTwo=[];
+var soundsTwoLight=[];
 
 //creates new audio object which is retrieveable from every function
-var sound = new Audio();
+var soundLight = new Audio();
 
 //counter for knowing if music was already played
-var value = 0;
+var valueLight = 0;
 
 //setter var for stop button
-var stop = false;
+var stopLight = false;
 
 //create a random number
 function generateRandomNumber(max) {
@@ -30,48 +31,48 @@ function generateRandomNumber(max) {
 function onclickStopButtonLight(){
   document.getElementById("play-button-light").style.display="flex";
   document.getElementById("stop-button-light").style.display="none";
-  stop = true;
-  soundRegulation();
-  stop = false;
+  stopLight = true;
+  soundRegulationlight();
+  stopLight = false;
 }
 
 //starts playing music with click on play button
 function onclickPlayButtonLight(){
   document.getElementById("play-button-light").style.display="none";
   document.getElementById("stop-button-light").style.display="flex";
-  value += 1;
-  soundRegulation();
+  valueLight += 1;
+  soundRegulationlight();
 }
 
 //creates audio object depending on which state
-function createAudioObject(){
-  if(sounds.length != 0){
-    sounds.push(soundsTwo[0]);
-    soundsTwo.shift();
+function createAudioObjectlight(){
+  if(soundsLight.length != 0){
+    soundsLight.push(soundsTwoLight[0]);
+    soundsTwoLight.shift();
   }
-  var x = generateRandomNumber(sounds.length - 1);
-  var soundSrc = sounds[x];
-  soundsTwo.push(soundSrc);
-  sound.src = soundSrc;
-  value += 1;
+  var x = generateRandomNumber(soundsLight.length - 1);
+  var soundSrcLight = soundsLight[x];
+  soundsTwoLight.push(soundSrcLight);
+  soundLight.src = soundSrcLight;
+  valueLight += 1;
 }
  
 //regulates sound 
-function soundRegulation(){
+function soundRegulationlight(){
   //if no music was played start new music
-  if (value == 1 && stop == false){
-    createAudioObject();
-    sound.play();
+  if (valueLight == 1 && stopLight == false){
+    createAudioObjectlight();
+    soundLight.play();
   //else play the music which was already played  
-  }else if(value > 1 && stop == false){
-    sound.play();
-  }else if(stop == true){
-    sound.pause();
+  }else if(valueLight > 1 && stopLight == false){
+    soundLight.play();
+  }else if(stopLight == true){
+    soundLight.pause();
   }
 }
 
 //starts new music if current music is finished
-sound.addEventListener('ended',function(){
-  createAudioObject();
-  soundRegulation();
+soundLight.addEventListener('ended',function(){
+  createAudioObjectLight();
+  soundRegulationLight();
 });
