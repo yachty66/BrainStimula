@@ -32,7 +32,7 @@ function onclickStopButtonLight(){
   document.getElementById("play-button-light").style.display="flex";
   document.getElementById("stop-button-light").style.display="none";
   stopLight = true;
-  soundRegulationlight();
+  soundRegulationLight();
   stopLight = false;
 }
 
@@ -41,11 +41,11 @@ function onclickPlayButtonLight(){
   document.getElementById("play-button-light").style.display="none";
   document.getElementById("stop-button-light").style.display="flex";
   valueLight += 1;
-  soundRegulationlight();
+  soundRegulationLight();
 }
 
 //creates audio object depending on which state
-function createAudioObjectlight(){
+function createAudioObjectLight(){
   if(soundsLight.length != 0){
     soundsLight.push(soundsTwoLight[0]);
     soundsTwoLight.shift();
@@ -58,10 +58,10 @@ function createAudioObjectlight(){
 }
  
 //regulates sound 
-function soundRegulationlight(){
+function soundRegulationLight(){
   //if no music was played start new music
   if (valueLight == 1 && stopLight == false){
-    createAudioObjectlight();
+    createAudioObjectLight();
     soundLight.play();
   //else play the music which was already played  
   }else if(valueLight > 1 && stopLight == false){

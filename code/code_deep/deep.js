@@ -71,7 +71,7 @@ function soundRegulationDeep(){
 }
 
 //starts new music if current music is finished
-sound.addEventListener('ended',function(){
+soundDeep.addEventListener('ended',function(){
   createAudioObjectDeep();
   soundRegulationDeep();
 });
