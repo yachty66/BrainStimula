@@ -28,16 +28,16 @@ function generateRandomNumber(max) {
 function onclickStopButtonStudy(){
   document.getElementById("play-button").style.display="flex";
   document.getElementById("stop-button").style.display="none";
-  stopDeep = true;
-  soundRegulationDeep();
-  stopDeep = false;
+  stopStudy = true;
+  soundRegulationStudy();
+  stopStudy = false;
 }
 
 //starts playing music with click on play button
-function onclickPlayButtonDeep(){
+function onclickPlayButtonStudy(){
   document.getElementById("play-button-study").style.display="none";
   document.getElementById("stop-button-study").style.display="flex";
-  valueDeep += 1;
+  valueStudy += 1;
   soundRegulationStudy();
 }
 
