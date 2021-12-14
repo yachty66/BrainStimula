@@ -26,8 +26,8 @@ function generateRandomNumber(max) {
 
 //stops playing music with click on stop button
 function onclickStopButtonStudy(){
-  document.getElementById("play-button").style.display="flex";
-  document.getElementById("stop-button").style.display="none";
+  document.getElementById("play-button-study").style.display="flex";
+  document.getElementById("stop-button-study").style.display="none";
   stopStudy = true;
   soundRegulationStudy();
   stopStudy = false;
